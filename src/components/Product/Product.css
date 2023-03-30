@@ -31,7 +31,7 @@
 
 /* Product Name */
 .product-info .product-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 0.0015em;
@@ -58,7 +58,8 @@
 /* Add to Cart Button */
 .btn-add-to-cart {
   position: absolute;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 18px;
   letter-spacing: 0.0125em;
   color: #0E161A;
@@ -73,7 +74,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   transition: all 0.3s;
 }
 
