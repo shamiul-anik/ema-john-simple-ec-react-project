@@ -1,4 +1,67 @@
-:root {
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: inherit;
+}
+
+button, input, optgroup, select, textarea  {
+  font-family: inherit;
+}
+
+ul > li {
+  list-style: none;
+}
+
+/* ===== Scrollbar CSS Start ===== */
+/* Firefox */
+ * {
+    scrollbar-width: auto;
+    scrollbar-color: #5B9BD5 #e2e9e1;
+} 
+
+/* Chrome, Edge, and Safari */
+ *::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+} 
+
+*::-webkit-scrollbar-track {
+  background: #cbd1d6;
+} 
+
+*::-webkit-scrollbar-thumb {
+    /* background-color: #abb1b7; */
+  background: #5B9BD5;
+  background: linear-gradient(90deg, #5B9BD5 0%, #4e91d0 61%, #4489ca 100%);
+  border-radius: 10px;
+}
+/* ===== Scrollbar CSS End ===== */
+
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -66,4 +129,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
