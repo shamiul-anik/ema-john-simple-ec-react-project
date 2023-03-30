@@ -1,6 +1,25 @@
+/* Google Font - Lato  */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #0E161A;
 }
 
 *,
@@ -35,11 +54,17 @@ ul > li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 /* ===== Scrollbar CSS Start ===== */
 /* Firefox */
  * {
     scrollbar-width: auto;
-    scrollbar-color: #5B9BD5 #e2e9e1;
+    scrollbar-color: #1C2B35 #e2e9e1;
 } 
 
 /* Chrome, Edge, and Safari */
@@ -54,8 +79,8 @@ ul > li {
 
 *::-webkit-scrollbar-thumb {
     /* background-color: #abb1b7; */
-  background: #5B9BD5;
-  background: linear-gradient(90deg, #5B9BD5 0%, #4e91d0 61%, #4489ca 100%);
+  background: #1C2B35;
+  background: linear-gradient(90deg, #1C2B35 0%, #243846 61%, #2d4554 100%);
   border-radius: 10px;
 }
 /* ===== Scrollbar CSS End ===== */
