@@ -6,11 +6,15 @@ import './Cart.css';
 const Cart = ({cartItem}) => {
 
   // Calculating Total Price and Total Shipping Charge
+  let totalQuantity = 0;
   let totalPrice = 0;
   let totalShippingCharge = 0;
+
   for (const product of cartItem) {
-    totalPrice += product.price;
-    totalShippingCharge += product.shipping;
+    product.quantity = product.quantity || 1; // if product.quantity = 0, then set product.quantity = 1. Otherwise it won't show the correct result as default quantity could be 0
+    totalQuantity += product.quantity;
+    totalPrice += (product.price * product.quantity);
+    totalShippingCharge += (product.shipping * product.quantity);
   }
 
   // Calculating Total Tax
@@ -23,7 +27,7 @@ const Cart = ({cartItem}) => {
     <div className="cart-container">
       <h5 className="order-summary">Order Summary</h5>
       <div className="order-details">
-        <p>Selected Items: {cartItem.length}</p>
+        <p>Selected Items: {totalQuantity}</p>
         <p>Total Price: ${totalPrice}</p>
         <p>Total Shipping Charge: ${totalShippingCharge}</p>
         <p>Tax: ${totalTax.toFixed(2)}</p>

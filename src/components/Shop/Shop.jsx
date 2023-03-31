@@ -15,7 +15,7 @@ const Shop = () => {
     .then(data => setProducts(data))
   }, []);
 
-  // Get Added Products from Local Storage
+  // Get Added Products from Local Storage and Set them to Show in the Cart
   useEffect( () => {
     const storedCart = getShoppingCart(); // getting stored product's id from local storage
     const savedCart = [];
@@ -34,8 +34,18 @@ const Shop = () => {
 
   // Adding Products to the Cart
   const handleAddToCart = (product) => {
-    const newItem = [...cartItem, product];
-    setCartItem(newItem);
+    let newCart = [];
+    const exists = cartItem.find((pd) => pd.id === product.id); // checking if the added product already exists in the cart or not
+    if(!exists) {
+      product.quantity = 1; // set initial quantity to 1, if the added product doesn't exist in the cart
+      newCart = [...cartItem, product]; // add the new product in the array
+    }
+    else {
+      exists.quantity += 1; // if the product already exist in the cart, then increase and set the product quantity by 1 (previous quantity + 1)
+      const remaining = cartItem.filter((pd) => pd.id !== product.id); // get the remaining products in the cart by checking the id's those doesn't match with the matched product id
+      newCart = [...remaining, exists]; // update the cart
+    }
+    setCartItem(newCart); // set cart item
     addToDb(product.id); // adding product to local storage
   };
 
