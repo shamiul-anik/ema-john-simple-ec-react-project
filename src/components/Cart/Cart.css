@@ -1,6 +1,10 @@
 /* Cart Container */
 .cart-container {
   background-color: rgba(255, 153, 0, 0.3);
+  position: fixed;
+  top: 80px;
+  right: 0;
+  min-width: 385px;
 }
 
 /* Order Summary */
@@ -15,12 +19,22 @@
 }
 
 /* Order Information */
-.cart-container > .order-info { 
+.cart-container > .order-details { 
   margin-top: 50px;
   margin-inline: 24px;
+  /* text-align: center; */
 }
 
-.cart-container > .order-info > p { 
+/* table td {
+  border: 1px solid gray;
+  padding: 3px 5px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+} */
+
+.cart-container > .order-details > p { 
   font-size: 18px;
   line-height: 20px;
   letter-spacing: 0.005em;
@@ -28,7 +42,7 @@
   margin-bottom: 24px;
 }
 
-.cart-container > .order-info > h6 { 
+.cart-container > .order-details > h6 { 
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;

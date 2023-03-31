@@ -6,6 +6,9 @@
   height: 80px;
   background-color: #1C2B35;
   padding: 1rem 6rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* Navbar List */
