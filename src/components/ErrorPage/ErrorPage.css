@@ -1,0 +1,23 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+
+.error-page > h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.error-page > p {
+  font-size: 1.5rem;
+  font-weight: medium;
+  margin-bottom: 0.5rem;
+}
+
+.error-page > p >i {
+  color: red;
+}
