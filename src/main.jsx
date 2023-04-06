@@ -8,6 +8,9 @@ import './index.css'
 import Layout from './components/Layout/Layout';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Shop from './components/Shop/Shop';
+import Orders from './components/Orders/Orders';
+import Review from './components/Review/Review';
+import Login from './components/Login/Login';
 
 const router = createBrowserRouter ([
   {
@@ -18,6 +21,18 @@ const router = createBrowserRouter ([
       {
         path: "/",
         element: <Shop></Shop>
+      },
+      {
+        path: "/orders",
+        element: <Orders></Orders>
+      },
+      {
+        path: "/review",
+        element: <Review></Review>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       },
     ],
   },
