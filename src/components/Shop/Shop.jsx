@@ -3,6 +3,7 @@ import Product from '../Product/Product';
 import './Shop.css';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { toast } from 'react-toastify';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -47,6 +48,9 @@ const Shop = () => {
     }
     setCartItem(newCart); // set cart item
     addToDb(product.id); // adding product to local storage
+
+    // Added Product to Cart Toast
+    toast.success('Product added successfully!');
   };
 
   return (
