@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = () => {
@@ -24,6 +24,7 @@ const Layout = () => {
         draggable
         pauseOnHover
         theme="light"
+        transition={Zoom}
       />
     </div>
   );

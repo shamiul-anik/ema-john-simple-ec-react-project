@@ -5,7 +5,7 @@ import './ErrorPage.css';
 const ErrorPage = () => {
 
   const error = useRouteError();
-  // console.log(error);
+  console.log(error);
 
   return (
     <div className="error-page">
@@ -13,6 +13,7 @@ const ErrorPage = () => {
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
         <i>{error.data}</i>
+        <i>{error.message}</i>
       </p>
     </div>
   );
