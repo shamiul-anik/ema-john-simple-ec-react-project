@@ -1,25 +1,27 @@
 import React from 'react';
 import Logo from '../../assets/images/Logo.svg';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
-      <div><Link to="/"><img src={Logo} alt="Logo" /></Link></div>
+      <div>
+        <Link to="/"><img src={Logo} alt="Logo" /></Link>
+      </div>
       <div>
         <ul className="nav-list">
           <li className="nav-item">
-            <Link to="/">Shop</Link>
+            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/">Shop</NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/orders">Orders</Link>
+            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/orders">Orders</NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/review">Review</Link>
+            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/review">Review</NavLink>
           </li>
           <li className="nav-item">
-            <Link to="/login">Login</Link>
+            <NavLink className={({isActive}) => isActive ? "active" : ""} to="/login">Login</NavLink>
           </li>
         </ul>
       </div>

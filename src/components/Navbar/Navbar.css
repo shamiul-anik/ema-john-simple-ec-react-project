@@ -28,7 +28,8 @@
   color: #FFFFFF;
 }
 
-.nav-item > a::after {
+.nav-item > a::after,
+.nav-item > a.active::after {
   position: relative;
   content: "";
   display: block;
@@ -41,7 +42,8 @@
 }
 
 /* Navbar List Items Hover*/
-.nav-item > a:hover::after {
+.nav-item > a:hover::after,
+.nav-item > a.active::after {
   width: 100%;
   background: #FFFFFF;
 }
