@@ -1,10 +1,10 @@
-.orders.main-container {
-  max-width: 571px;
-  margin-inline: auto;
-  padding: 5rem 0;
+.cart-products-container {
+  width: fit-content;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
-.cart-products-container {
+.cart-product {
   padding: 8px 24px 8px 8px;
   margin-bottom: 0.5rem;
   border: 1px solid #95A0A7;
@@ -16,6 +16,8 @@
 .cart-product-img > img {
   height: 91px;
   width: 91px;
+  min-width: 91px;
+  object-fit: cover;
   border: 1px solid lightgray;
   border-radius: 6px;
 }
